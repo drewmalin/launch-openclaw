@@ -235,6 +235,7 @@ EOF
 )"
 
   log "Setting OpenClaw Control UI allowedOrigins to ${origins_json}"
+  openclaw config set gateway.bind "all"
   openclaw config set gateway.controlUi.allowedOrigins "$origins_json" --strict-json >/dev/null
 }
 
